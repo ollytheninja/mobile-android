@@ -27,7 +27,7 @@ jobs:
 
         git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 
-        git fetch github master
+        git fetch github code
 
         git checkout -B code github/code
 
