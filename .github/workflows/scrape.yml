@@ -29,11 +29,11 @@ jobs:
 
         git fetch github master
 
-        git checkout -B master github/master
+        git checkout -B code github/code
 
         git reset upstream/master --hard
 
-        git reset github/master --soft
+        git reset github/code --soft
 
         git add .
 
@@ -41,7 +41,7 @@ jobs:
 
         git commit -a -m "New code" && COMMITTED="YES" || exit 0
 
-        git push github master
+        git push github code
 
         if [ $COMMITTED == "YES" ]; then
 
